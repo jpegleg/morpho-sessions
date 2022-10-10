@@ -70,7 +70,7 @@ async fn main() -> std::io::Result<()> {
     let readi: DateTime<Utc> = Utc::now();
     env_logger::init_from_env(env_logger::Env::default().default_filter_or("info"));
     let config = load_rustls_config();
-    log::info!("morpho initialized at {} >>> morpho session HTTPS server on port 1443 using rustls TLSv1.3 and TLSv1.2", readi);
+    log::info!("morpho initialized at {} >>> morpho session HTTPS server on port 443 using rustls TLSv1.3 and TLSv1.2", readi);
     HttpServer::new(|| {
         App::new()
             .wrap(RedirectHttps::default())
@@ -93,7 +93,7 @@ async fn main() -> std::io::Result<()> {
             .service(Files::new("/", "static"))
 
     })
-    .bind_rustls("0.0.0.0:1443", config)?
+    .bind_rustls("0.0.0.0:443", config)?
     .run()
     .await
 }
