@@ -1,0 +1,16 @@
+protean_build() {
+  mkdir static 2>/dev/null
+  ~/.cargo/bin/cargo check || exit 1
+}
+
+protean_test() {
+  ~/.cargo/bin/cargo doc
+  rm -rf ../static/morpho-session-ocs/
+  mv target/doc ../static/morpho-session-docs
+  ~/.cargo/bin/cargo clippy
+  ~/.cargo/bin/cargo clean
+  trivy image "localhost:5000/morpho-sessions:test" > ../morpho_sessions_trivy-report_$(date +%Y%m%d%H%M%S).txt
+  docker-compose up -d
+  curl -vvv -k https://localhost/
+  curl -k https://localhost/ | sha256sum
+}
