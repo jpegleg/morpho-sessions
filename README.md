@@ -20,7 +20,7 @@ Example:
 </form> 
 ```
 
-The `type="number"` and `required="required"` are important to avoid do form validation. If a user bypasses the form, they will observe deserialization errors.
+The `type="number"` and `required="required"` are important to do form input validation. If a user bypasses the form and sends non-integer data into the query, they will observe deserialization errors.
 
 #### Also see the more "core" version without session cookies: https://github.com/jpegleg/morpho-web/
 
