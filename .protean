@@ -5,7 +5,7 @@ protean_build() {
 
 protean_test() {
   ~/.cargo/bin/cargo doc
-  rm -rf ../static/morpho-session-ocs/
+  rm -rf ../static/morpho-session-docs/
   mv target/doc ../static/morpho-session-docs
   ~/.cargo/bin/cargo clippy
   ~/.cargo/bin/cargo clean
