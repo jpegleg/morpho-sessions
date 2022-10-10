@@ -52,9 +52,9 @@ Port redirection is included by default now.
 
 HSTS and security headers are inserted by default.
 
-## The cookies in the template
+## the cookies in the template
 
-The default cookie is not a secured (signed) cookie, just a simple session cookie. Actix has support for adding signing and other aspects to cookies if desired.
+The default cookie is not a secured (signed) cookie, just a simple session cookie. Actix has support for adding signing and other aspects to cookies if desired. The designed usage is not for sensitive sessions, however it can be adjusted to the needs of more sensitive sessions.
 
 ## session files
 
