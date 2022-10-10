@@ -10,9 +10,9 @@ The included Dockerfile uses the `FROM ekidd/rust-musl-builder AS build` to comp
 and then we copy the dependencies into a `FROM scratch` empty container. The resulting OCI
 image has no shell, nothing but the dependencies for the web server.
 
-The base image is less than 12MB for the entire framework. The size of the added content from `static`
-will increase the image size etc. Alternatively to doing a copy into the container image,
-the /app/static directory can be a volume mount containing the content to load. Note that by default the cert and key pair are in /app/ which is the workdir for the server, while the webroot is /app/static/.
+The base image of the core is less than 12MB and just over 12MB with the cookies code, for the entire framework.
+Unlike the regular morpho-web, we don't copy any local files into the build, the /app/static directory is volume
+mount containing the content to load. The key and cert for TLS are also mounted.
 
 From the test docker-compose.yml:
 
