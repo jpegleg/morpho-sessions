@@ -4,6 +4,24 @@
 
 A rust template for front-end web server microservice container using actix web framework.
 
+The index.html in the template is include a form field that allows the "fage" query to be sent with a GET using an integer value.
+
+Example:
+
+```
+<form action="/session">
+  <h1>Age Required</h1>
+  <label for="fage">Enter your age in years:</label><br>
+  </br>
+  <input type="number" required="required" id="fage" name="fage"></br>
+  </br>
+  <input type="submit" value="enter">
+  </br>
+</form> 
+```
+
+The `type="number"` and `required="required"` are important to avoid do form validation. If a user bypasses the form, they will observe deserialization errors.
+
 #### Also see the more "core" version without session cookies: https://github.com/jpegleg/morpho-web/
 
 The included Dockerfile uses the `FROM ekidd/rust-musl-builder AS build` to compile with cargo
