@@ -1,0 +1,12 @@
+version: '3'
+services:
+  morpho:
+    image: localhost:5000/morpho-sessions:test
+    container_name: morphosessions
+    restart: unless-stopped
+    ports:
+      - "443:443"
+    volumes:
+      - /opt/protean-gitops/static/:/app/static/
+      - /opt/protean-gitops/cert.pem:/app/cert.pem
+      - /opt/protean-gitops/privkey.pem:/app/privkey.pem
