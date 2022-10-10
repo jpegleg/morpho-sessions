@@ -4,7 +4,7 @@
 
 A rust template for front-end web server microservice container using actix web framework.
 
-The index.html in the template is include a form field that allows the "fage" query to be sent with a GET using an integer value.
+The index.html in the template is to include a form field that allows the "fage" query to be sent with a GET using an integer value.
 
 Example:
 
