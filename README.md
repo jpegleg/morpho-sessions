@@ -65,3 +65,7 @@ index2.html - the actual index page
 index3.html - the warning page
 
 Feel free to adjust those file names, they don't have to be html, etc.
+
+## TODO
+
+- error handling for the session counter
