@@ -13,7 +13,7 @@ Example:
   <h1>Age Required</h1>
   <label for="fage">Enter your age in years:</label><br>
   </br>
-  <input type="number" required="required" id="fage" name="fage"></br>
+  <input type="number" required="required" id="fage" name="fage" max="200"></br>
   </br>
   <input type="submit" value="enter">
   </br>
