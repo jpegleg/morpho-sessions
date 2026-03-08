@@ -1,8 +1,8 @@
-![cdlogo](https://carefuldata.com/images/cdlogo.png)
-
 # morpho-sessions
 
 A rust template for front-end web server microservice container using actix web framework.
+
+This project has been archived, see [kiabluejay](https://github.com/jpegleg/kiabluejay/) for the reference implementation.
 
 The index.html in the template is to include a form field that allows the "fage" query to be sent with a GET using an integer value.
 
